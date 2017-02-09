@@ -1,0 +1,8 @@
+%h1 Ваше повідомлення:
+
+%h2= @post.title
+%p= @post.content
+
+= link_to "Редагувати", edit_post_path(@post)
+= link_to "Видалити", post_path(@post), method: :delete, data: { confirm: "Ви впевнені, що хочете видалити Ваш пост?" }
+= link_to "На головну", root_path
