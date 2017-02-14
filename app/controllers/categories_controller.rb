@@ -1,11 +1,11 @@
-class PostsController < ApplicationController
+class CategoriesController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy] 
   
   def index
   end
   
   def new
-    @category = Post.new
+    @category = Category.new
   end
   
   def show
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
   end
   
   def destroy
-    category.destroy
+    @category.destroy
     redirect_to root_path
   end
   
@@ -49,3 +49,4 @@ class PostsController < ApplicationController
   end
   
 end
+

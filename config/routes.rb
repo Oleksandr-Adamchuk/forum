@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :posts
-  root 'posts#index'
+  
+  resources :categories do
+    resources :messages
+  end
+  root 'categories#index'
 end
