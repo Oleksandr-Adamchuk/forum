@@ -1,3 +1,8 @@
 <h1> Ласкаво просимо на форум</h1>
 
-<%= link_to "Створити тему:", new_category_path%>
+<%= link_to "Створити тему:", new_category_path %>
+<div>
+<% @category.each do |col|   %>
+ <%= col.title %>
+ <% end %>  
+</div>

@@ -2,6 +2,7 @@ class CategoriesController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy] 
   
   def index
+    @category = Category.all
   end
   
   def new
@@ -38,6 +39,9 @@ class CategoriesController < ApplicationController
     redirect_to root_path
   end
   
+  def about
+    
+  end
   
   private
   
