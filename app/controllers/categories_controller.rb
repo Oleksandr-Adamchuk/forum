@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
   end
   
   def create
-    @category = Post.new(post_params)
+    @category = Category.new(post_params)
     if @category.save
       redirect_to @category
       
@@ -46,7 +46,7 @@ class CategoriesController < ApplicationController
   private
   
   def find_post
-    @category = Post.find(params[:id])
+    @category = Category.find(params[:id])
   end
   def post_params
     params.require(:post).permit(:т, :content)
