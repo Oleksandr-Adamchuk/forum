@@ -25,6 +25,7 @@ gem 'simple_form', '~> 3.4'
 gem 'devise', '~> 4.2' 
 gem 'sprockets', '3.6.3'
 gem 'test-unit'
+gem 'bcrypt-ruby', '3.1.2'
 
 group :development, :test do
   gem 'byebug', platform: :mri
