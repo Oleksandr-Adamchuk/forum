@@ -1,0 +1,33 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.login_form h1 {
+  text-align: center;
+}
+form.new_user label {
+  display: block;
+}
+form  input, div.field_with_errors input{
+  width: 100%;
+  margin-bottom: 10px;
+}
+form input.login_submit {
+  width: auto;
+  border-radius: 0px;
+  display: block;
+  height: 30px;
+  margin-bottom: 10px;
+  box-shadow:  0px 0px 5px 0px grey;
+}
+div.field_with_errors input {
+  border: 1px solid red;
+}
+#error_explanation {
+  color: red;
+  font-weight: bold;
+  font-size: 1em;
+}
+.alert {margin: 0}
+div.alert:nth-child(1) {
+  display: none;
+}
