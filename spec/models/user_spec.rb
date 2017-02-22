@@ -10,7 +10,7 @@ describe User, :type => :model do
     )
   end
   
-   subject { @user }
+  subject { @user }
   
   it 'should respond to attributes' do
     expect(@user).to respond_to(:username)
@@ -19,6 +19,7 @@ describe User, :type => :model do
     expect(@user).to respond_to(:password)
     expect(@user).to respond_to(:password_confirmation)
     expect(@user).to respond_to(:authenticate)
+    expect(@user).to respond_to(:remember_token)
     
   end
     
@@ -73,6 +74,11 @@ describe User, :type => :model do
       it { should_not eq user_for_invalid_password }
       specify { expect(user_for_invalid_password).to be false }
     end
+  end
+  
+  describe 'remember token' do
+    before { @user.save }
+    it {expect(@user.remember_token).to_not be_blank}
   end
 end
 

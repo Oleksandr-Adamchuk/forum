@@ -16,22 +16,22 @@ describe 'Authentification' do
     describe "with invalid information" do
       before { click_button "Sign in" }
 
-      it { expext(page).to have_title('Sign in') }
+      it { expect(page).to have_title('Sign in') }
       it { should have_selector('div.alert.alert-error') }
     end
   
-    describe 'With valis information' do
+    describe 'With valid information' do
       let(:user) {FactoryGirl.create(:user)}
       before do
-        fill_in 'user_username', with: user.email.upcase
-        fill_in 'user_password', with: user.password
+        fill_in 'sessions_email', with: user.email.upcase
+        fill_in 'sessions_password', with: user.password
         click_button 'Sign in'
       end
       
       it { expect(page).to have_title(user.username)  }
       it { expect(page).to have_link('Profile', href: user_path(user))  }
       it { expect(page).to have_link('Sign out', href: signout_path)  }
-      it { expect(page).to_not have_link('Sign out', href: signout_path)  }
+      it { expect(page).to_not have_link('Sign in', href: signin_path)  }
     end
   end
   
