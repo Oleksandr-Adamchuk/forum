@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy] 
   
   def index
-    @categories = Category.all
+    @categories = Category.paginate(page: params[:page])
   end
   
   def new
@@ -10,14 +10,17 @@ class CategoriesController < ApplicationController
   end
   
   def show
+    @category = Category.find(params[:id])
   end
   
   def create
     if signed_in?
     @category = current_user.categories.build(post_params)
-    if @category.save!
-      redirect_to @category
-    end
+      if @category.save!
+        
+        flash[:notice] = "Successfully created category."
+       redirect_to @category
+      end
     else
       render '/sessions/new'
     end  

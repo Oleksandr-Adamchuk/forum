@@ -1,0 +1,17 @@
+<div class="message_wrapper">
+<div class="user_info">
+  
+  
+  <p> <%= gravatar_for message.user, size: 52 %></p>
+  <p> <%= link_to message.user.username, message.user %></p>
+</div>
+  
+
+ 
+<div class="message_content">
+ <p> <%= message.created_at%><br></p>
+  <%= message.body %>
+  
+</div>
+</div>
+

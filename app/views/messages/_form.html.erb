@@ -1,0 +1,13 @@
+<div style="width:40%">
+<%= form_for([@category, @category.messages.build]) do |f| %>
+
+  <p>
+    <br>
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+</div>

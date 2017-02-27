@@ -13,7 +13,106 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background-color: #F6F6F6;
+}
 #log_in {
     float: right;
     margin: 0;
+    background-color: #2E3539;
+    color: white;
+}
+.navbar {
+   border-top: 3px solid #2E3539; 
+   
+    
+}
+.navbar-default .navbar-nav > li > a {
+  color: white !important;  
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  text-decoration: underline;
+  color: #FF9000;
+}
+.navbar-default .navbar-nav > .open > a {
+    background-color: #2E3539 !important;
+}
+
+/* NAV TOP*/
+.nav_top {
+    height: 120px;
+    background-color: #43A6DF;
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+    
+    
+}
+.logo_block {
+    float: left;
+    
+}
+.logo_block a {
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    padding-left: 10px;
+    color: white;
+    font-size: 38px;
+    
+}
+.logo_block a:hover {
+    text-decoration: none;
+    
+}
+.nav_top_ul {
+    list-style-type: none;
+    float: right;
+   
+    
+}
+.nav_top_ul li {
+    transition: background-color 0.3s ease;
+    float: left;
+    height: 120px;
+    width: 132px;
+    border-left: 12px solid #F6F6F6;
+}
+
+.nav_top_ul li:hover {
+background-color: #FF9000;
+}
+
+.nav_top_ul li:nth-of-type(1) {
+    background-image: url(http://xenforo.pixelgoose.com/styles/pixelgoose/metro/blue/xenforo/tab-icon-home.svg);
+}
+
+.nav_top_ul li:nth-of-type(2) {
+    background-image: url(http://xenforo.pixelgoose.com/styles/pixelgoose/metro/blue/xenforo/tab-icon-forums.svg);
+}
+
+.nav_top_ul li:nth-of-type(3) {
+    background-image: url(http://xenforo.pixelgoose.com/styles/pixelgoose/metro/blue/xenforo/tab-icon-members.svg);
+}
+.nav_top_ul li a {
+    transition: color 0.3s ease;
+    display: block;
+    color: white;
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+.nav_top_ul li a:hover {
+    color: black;
+}
+
+
+.nav_top_ul li span {
+    bottom: 12px;
+    left: 12px;
+    position: absolute;
+    font-size: 16px;
+    line-height: 16px;
 }

@@ -1,12 +1,13 @@
 <h1> Welcome to forum</h1>
 
 <%= link_to "Create category:", new_category_path %>
-
+<%= will_paginate %>
 <table class="category_list">
   <tr>
     <th width="70%">Categories</th>
     <th width="30%">Last Message</th>
   </tr>
+  
   <% @categories.each do |col|   %>
     <tr>
       <td><h4><%= link_to col.title, col %></h4>
@@ -17,4 +18,6 @@
      
     </tr>
   <% end %>
+ 
 </table>
+<%= will_paginate %>

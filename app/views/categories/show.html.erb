@@ -1,12 +1,13 @@
 <p>
-  <strong>Title:</strong>
-  <%= @category.title %>
+  <h2>Category <%= @category.title %></h2>
+  
 </p>
- 
+
+   
+   <%= render @category.messages %>
 
 
-<h2>Messages</h2>
+<h2>Type your message <%= current_user.username %></h2>
+<%= render '/messages/form' %>
 
-
-<h2>Add a comment:</h2>
 
