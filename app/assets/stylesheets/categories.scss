@@ -2,3 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+form.new_category {
+  width: 300px;
+}
+form.new_category input[type="submit"] {
+  width: 20%;
+  
+}
+table.category_list {
+  border: 1px solid grey;
+}
+table.category_list td {
+  border: 1px solid grey;
+  padding: 5px;
+}
+table.category_list th {
+  text-align: center;
+}

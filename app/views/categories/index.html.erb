@@ -1,8 +1,20 @@
-<h1> Ласкаво просимо на форум</h1>
+<h1> Welcome to forum</h1>
 
-<%= link_to "Створити тему:", new_category_path %>
-<div>
-<% @category.each do |col|   %>
- <%= col.title %>
- <% end %>  
-</div>
+<%= link_to "Create category:", new_category_path %>
+
+<table class="category_list">
+  <tr>
+    <th width="70%">Categories</th>
+    <th width="30%">Last Message</th>
+  </tr>
+  <% @categories.each do |col|   %>
+    <tr>
+      <td><h4><%= link_to col.title, col %></h4>
+        <small><%= col.messages.count %> messages</small><br />
+       
+      <td class="right"></td>
+      <td><%= link_to "Show", col %></td>
+     
+    </tr>
+  <% end %>
+</table>

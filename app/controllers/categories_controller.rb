@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy] 
   
   def index
-    @category = Category.all
+    @categories = Category.all
   end
   
   def new
@@ -13,13 +13,18 @@ class CategoriesController < ApplicationController
   end
   
   def create
-    @category = Category.new(post_params)
-    if @category.save
+    if signed_in?
+    @category = current_user.categories.build(post_params)
+    
+    if @category.save!
       redirect_to @category
       
     else
-      render 'new'
+      render '/sessions/new'
     end
+    else
+      render 'You must authorisize'
+    end  
   end
   
   def edit
@@ -49,7 +54,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
   end
   def post_params
-    params.require(:post).permit(:т, :content)
+    params.require(:category).permit(:title)
   end
   
 end
