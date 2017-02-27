@@ -15,15 +15,11 @@ class CategoriesController < ApplicationController
   def create
     if signed_in?
     @category = current_user.categories.build(post_params)
-    
     if @category.save!
       redirect_to @category
-      
-    else
-      render '/sessions/new'
     end
     else
-      render 'You must authorisize'
+      render '/sessions/new'
     end  
   end
   
