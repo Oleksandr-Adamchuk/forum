@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:url"         content="http://forum-stranger-if.c9users.io:8080" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Your Website Title" />
-  <meta property="og:description"   content="Your description" />
-  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Your Website Title" />
+    <meta property="og:description"   content="Your description" />
+    <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+    <script src="https://use.fontawesome.com/3a430199ae.js"></script>
+
     <title><%= content_for?(:title) ? yield(:title) : "Forum" %></title>
     <%= csrf_meta_tags %>
 
@@ -159,9 +161,37 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2017</p>
+        <div class="footer_left">
+          <h6>about us</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum, ipsum vel ornare finibus, lectus diam condimentum mauris, vel dignissim ligula risus quis velit. Suspendisse imperdiet dolor a metus auctor convallis. Vestibulum gravida sodales nisi, id pulvinar odio finibus sed. Aliquam gravida nunc lobortis ligula laoreet sollicitudin. In vel rhoncus quam, quis posuere arcu. Integer non finibus ligula, ac porttitor ligula.</p>
+          
+        </div>
+        <div class="footer_right">
+          <div class="social_header">
+            <h3>Join us</h3>
+            <ul>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+</a></li>
+              <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+</a></li>
+              <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i>
+</a></li>
+              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+</a></li>
+              <li><a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i>
+</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        
       </footer>
-    <%= debug(params) if Rails.env.development?%>
+      <div class="company">
+        &copy; 2017, created by Oleksandr Adamchuk.<br>
+       
+        If you have any questions or suggestions, feel free to <a href="mailto:stranger.if.2014@gmail.com">contact me!</a> 
+      </div>
+   <!-- <%= debug(params) if Rails.env.development?%> -->
     </div> <!-- /container -->
 
   </body>
