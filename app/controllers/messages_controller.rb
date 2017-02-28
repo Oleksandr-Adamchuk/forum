@@ -1,10 +1,5 @@
 class MessagesController < ApplicationController
   
-  # def index
-  #   @message = Message.new(params[:id])
-  #   redirect_to categories_path
-  # end
-  
   def create
     @category = Category.find(params[:category_id])
     @message = @category.messages.build(comment_params)
@@ -16,15 +11,6 @@ class MessagesController < ApplicationController
   def new
     
   end
-  
-#   def destroy
-#   @article = Article.find(params[:article_id])
-#   @comment = @article.comments.find(params[:id])
-#   @comment.destroy
-
-#   redirect_to article_path(@article)
-# end
-
  
   private
     def comment_params
