@@ -9,16 +9,80 @@ form.new_category input[type="submit"] {
   width: 20%;
   
 }
+.welcome {
+  float: left;
+}
+.welcome h1 {
+ font-size: 26px;
+}
+.create_topic {
+  width: 130px;
+  float: right;
+  text-align: center;
+}
+.create_topic a {
+  display: block;
+  height: 40px;
+  background-color: #FF9000;
+  color: #000;
+  margin-top: 10px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
 table.category_list {
-  border: 1px solid grey;
+  width: 100%;
+  border: 1px solid rgb(228,228,228);
+  background-color: #fff;
 }
 table.category_list td {
-  border: 1px solid grey;
+  border: 1px solid rgb(228,228,228);
   padding: 5px;
+}
+table.category_list a {
+  color: rgb(46,53,57);
+}
+table.category_list td span {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAAAkCAYAAABmHbPbAAACqklEQVR4nO2az2rUUBSH70pwIQhSX8CFG0HwEWqfQAiFnKi1C81JKdSFnZ0VV30FH2Aq+AaCzb0UcVFBcDMzXcisu5LpH7rruJnoMJiY3HtO58Q5P7gQJrmnX858TW6aGqPRaDQajUazgBkMBmOf0e/333DwPNwbjn3GSnfIwiOtP9J4vIG4oHwF4pJIWn+k8fwG8j0BaqhChqbHc0kkrT/SeEKAdqe2O1Q8vgKtvB/uFtvL3SEZj7T+SOPxBppsd6jN9hXIGGOWu8MO9ZVIWn+k8QQBcUCFCGQMvUQE/dmm7I80nmAgaqhQgSafbVNJJK0/0nhIgCihKASafE4iEWF/XlH0RxpP8Kq+bPjyhD6FlQ1fnpLf4NLz5e6PtO9LHJAK1JynzvFiBOKuF/qFU9eT1h9pPOKAVKB28YgDUoHaxSMOqA0C1V1XVM2l5AmJCsRc738XKDgqUHWk9UcF+kdUIH6e9OPj26mNd9DCITo4RgfHaOEQc3i9eRAtXTkQZT0ViHc+5hCjhTO0MC4Zp5mF1SsDoq7XBoHaugZClzyrEGd2PGUH4qinAjXnqZPNg2gJHYxmRSmuNmkOezP7fm58enKLDYirXhsECsm8BMry+O1frzQORs/3V++sf16/gS4+mt6X2niHDYirngrEMx9d8r3sdpXZ+Gv0Ibr2Ik/uo4WLP/uSb2xAXPVUIJ75aOG0EKPquMzGa1NynbABcdVTgXjmewnkYFQbiHo0PcEidf89o+nw5ZHWn6Y/p9fr3TOm+haGDn5s2bWbmCd30cKJ1y1MSoNUIHKe1JiKRbSFi4395MHLL9H1WclqLaI1i5Gyx3i0kBpjDLrknddjvGZxgi6O0MJljT8iXmZ5/GjevBqBIX+VoVm8zLxMPUcH594vUzUajWZu+QUx5R64fRszuQAAAABJRU5ErkJggg==);
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  float: left;
+  margin: 5px;
+  background-position: -35px;
+  margin-top: 10px;
+  
+}
+table.category_list td h4 {
+  margin-bottom: 0;
+  margin-top: 7px;
+  font-size: 14px;
+  font-weight: bold;
 }
 table.category_list th {
   text-align: center;
+  height: 50px;
+  color: white;
+  background-color: #43A6DF;
+  border: 1px solid rgb(228,228,228);
 }
 div.message_wrapper {
   min-height: 250px;
+}
+
+div.login_link a {
+  display: inline-block;
+  height: 43px;
+  text-decoration: none;
+  float: right;
+  border: 1px solid #e4e4e4;
+  background-color: #43A6DF;
+  padding: 5px;
+  padding-top: 10px;
+  font-weight: bold;
+  box-shadow: 0 0 2px 0 grey;
+  color: white;
+}
+div.login_link a:hover {
+  background-color: #FF9000;
 }

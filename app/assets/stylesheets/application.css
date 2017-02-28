@@ -116,3 +116,10 @@ background-color: #FF9000;
     font-size: 16px;
     line-height: 16px;
 }
+.devider {
+    height: 2px;
+    background-color: #CBCBCB;
+    margin: 0 auto;
+    max-width: 1140px;
+    margin-top: 10px;
+}

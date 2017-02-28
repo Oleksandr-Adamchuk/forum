@@ -1,6 +1,6 @@
-<h1> Welcome to forum</h1>
+<div class="welcome"><h1>List of categories</h1></div>
 
-<%= link_to "Create category:", new_category_path %>
+<div class="create_topic"><%= link_to "Create category", new_category_path %></div>
 <%= will_paginate %>
 <table class="category_list">
   <tr>
@@ -10,11 +10,11 @@
   
   <% @categories.each do |col|   %>
     <tr>
-      <td><h4><%= link_to col.title, col %></h4>
+      <td><span class="category_icon"></span> <h4><%= link_to col.title, col %></h4>
         <small><%= col.messages.count %> messages</small><br />
        
       <td class="right"></td>
-      <td><%= link_to "Show", col %></td>
+      
      
     </tr>
   <% end %>

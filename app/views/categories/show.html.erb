@@ -5,9 +5,12 @@
 
    
    <%= render @category.messages %>
+<% if signed_in? %>
+    <h2>Type your message <%= current_user.username %></h2>
+    <%= render '/messages/form' %>
+<% else %>
+  <div class="login_link"><%= link_to 'Sign_in to post a message', "/signin" %></div>
+<% end %>
 
-
-<h2>Type your message <%= current_user.username %></h2>
-<%= render '/messages/form' %>
 
 
