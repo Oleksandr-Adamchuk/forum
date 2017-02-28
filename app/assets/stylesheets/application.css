@@ -123,3 +123,61 @@ background-color: #FF9000;
     max-width: 1140px;
     margin-top: 10px;
 }
+
+/******* ASIDE ***********/
+.well {
+    margin-top: 10px;
+    margin-left: -20px;
+    border-radius: 0;
+    border: 0;
+    background-color: #F6F6F6;
+    box-shadow: none;
+    padding: 0;
+    
+}
+
+.well > div {
+    margin-bottom: 10px;
+}
+.log_in_buton {
+    height: 40px;
+   
+    background-color: #FF9000;
+    text-align: center;
+    
+}
+.log_in_buton a {
+    height: 40px;
+    color: white;
+    font-size: 19px;
+    display: block;
+    padding-top: 5px;
+}
+.stat_header {
+    height: 48px;
+    background-color: #2E3539;
+    color: #fff;
+    font-size: 14px;
+    text-align: left;
+    padding: 13px 11px;
+}
+.stat_content {
+    
+    font-size: 13px;
+    padding: 10px;
+    color: rgb(150,150,150);
+    border: 1px solid #E4E4E4;
+    background-color: #fff;
+}
+.stat_content dl {
+    overflow: hidden;
+    margin: 0;
+    
+}
+.stat_content dt {
+    float: left;
+    
+}
+.stat_content dd {
+    float: right;
+}
