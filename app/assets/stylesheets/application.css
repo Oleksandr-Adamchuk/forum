@@ -61,7 +61,7 @@ body {
     position: absolute;
     bottom: 0;
     padding: 5px;
-    padding-left: 10px;
+    padding-left: 20px;
     color: white;
     font-size: 38px;
     
@@ -73,8 +73,18 @@ body {
 .nav_top_ul {
     list-style-type: none;
     float: right;
-   
-    
+}
+@media (max-width: 520px){
+    .nav_top_ul {
+        display:none;
+    }
+    .nav_top {
+        height: 60px;
+    }
+    .logo_block a {
+        padding: 2px;
+        padding-left: 30%
+    }
 }
 .nav_top_ul li {
     transition: background-color 0.3s ease;
